@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="{{lang}}" dir="{{dir}}">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>{{pageTitle}}</title>
+    <meta name="description" content="{{pageDescription}}">
+    {{seo}}
+
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <!-- For IE -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600'
+        rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="css/responsive.css" rel="stylesheet" type="text/css">
+    <link href="css/site.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+
+
+
+    <script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+    <script type="text/javascript" src="js/wow.js"></script>
+    <script type="text/javascript" src="js/classie.js"></script>
+
+
+
+    <script src="js/respond-1.1.0.min.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/html5element.js"></script>
+
+
+</head>
+
+<body>
+
+
+    <div style="overflow:hidden;">
+
+        <header class="header" id="header">
+
+            <div class="container">
+
+                    <figure class="logo animated fadeInDown delay-07s" style="width: 100%; text-align: center;">
+
+
+                    <a href="#"><img src="img/robotec.png" alt="RoboTec" width="627" height="391"></a>
+
+                </figure>
+                <h1 class="hero-title animated fadeInDown delay-07s">{{t:YOUR WINDOW TO THE DIGITAL WORLD}}</h1>
+                <ul class="we-create animated fadeInUp delay-1s">
+                    <li>{{t:We are a digital agency that loves crafting beautiful websites}}</li>
+                </ul>
+                <a class="link animated fadeInUp delay-1s" href="#service">{{t:lets Start}}</a>
+            </div>
+        </header><!--header-end-->
+    </div>
+
+
+    <nav class="main-nav-outer" id="test"><!--main-nav-start-->
+        <div class="container">
+            <ul class="main-nav" id="main-navigation">
+                <li><a href="#service">{{t:Services}}</a></li>
+                <li><a href="#Portfolio">{{t:Portfolio}}</a></li>
+
+                <li><a href="#team">{{t:Team}}</a></li>
+                <li class="small-logo"><a href="#header"><img src="img/logo.png" alt="RoboTec"
+                            width="130px"></a></li>
+
+                <li><a href="#technologies">{{t:Technologies}}</a></li>
+                <li><a href="#contact">{{t:Contact}}</a></li>
+
+
+
+
+
+
+
+                <li class="language-login-wrapper">
+                    <select aria-label="{{t:LANGUAGE}}" class="language-dropdown-content" onchange="window.location.href=this.value;">
+                        <option value="#" selected disabled>{{t:LANGUAGE}}</option>
+                        <option value="{{url:en}}">{{t:English}}
+                        </option>
+                        <option value="{{url:de}}">{{t:German}}
+                        </option>
+                        <option value="{{url:nl}}">{{t:Dutch}}
+                        </option>
+                        <option value="{{url:ar}}">{{t:Arabic}}
+                        </option>
+                        <option value="{{url:ru}}">{{t:Russian}}
+                        </option>
+                        <option value="{{url:fr}}">{{t:French}}
+                        </option>
+                        <option value="{{url:it}}">{{t:Italian}}
+                        </option>
+                        <option value="{{url:tr}}">{{t:Turkish}}
+                        </option>
+
+
+                    </select>
+                </li>
+
+
+
+
+
+
+
+
+            </ul>
+            <a class="mobile-brand" href="#header" aria-label="RoboTec"><img src="img/logo.png" alt="RoboTec" width="130" height="55"></a>
+            <button class="res-nav_click" type="button" aria-label="{{t:Menu}}" aria-expanded="false" aria-controls="main-navigation"><i class="fa-bars" aria-hidden="true"></i></button>
+        </div>
+    </nav><!--main-nav-end-->
+
+
+
+
+
+<section class="main-section" id="service"><!--main-section-start-->
+    <div class="container">
+        <h2>{{t:Services}}</h2>
+        <h6>
+           {{t:We deliver top-notch software solutions tailored to your needs, ensuring your success every step of the way}}</h6>
+        <div class="row">
+            <div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
+                <div class="service-list">
+                    <div class="service-list-col1">
+                        <i class="fa-paw"></i>
+                    </div>
+                    <div class="service-list-col2">
+                        <h3>{{t:branding}} &amp; {{t:identity}}</h3>
+                        <p>{{t:Crafting distinctive brand identities that leave a lasting impression. Elevate your brand with our creative solutions}}</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                    <div class="service-list-col1">
+                        <i class="fa-gear"></i>
+                    </div>
+                    <div class="service-list-col2">
+                        <h3>{{t:web development}}</h3>
+                        <p>{{t:Specializing in creating responsive websites and mobile applications. From sleek websites to cutting-edge iOS and Android apps, we bring your ideas to life}}</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                    <div class="service-list-col1">
+                        <i class="fa-apple"></i>
+                    </div>
+                    <div class="service-list-col2">
+                        <h3>{{t:mobile design}}</h3>
+                        <p>{{t:Designing intuitive and visually stunning interfaces for mobile applications. Enhance user experience and engagement on every screen size}}</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                    <div class="service-list-col1">
+                        <i class="fa-medkit"></i>
+                    </div>
+                    <div class="service-list-col2">
+                        <h3>{{t:24/7 Support}}</h3>
+                        <p>{{t:Providing reliable and responsive IT support services around the clock. Stay productive and secure with our dedicated team at your service}}</p>
+                    </div>
+                </div>
+            </div>
+            <figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
+
+                <img src="img/laptop-robotec.png" alt="RoboTec">
+
+            </figure>
+
+        </div>
+    </div>
+</section><!--main-section-end-->
+
+
+<section class="main-section alabaster"><!--main-section alabaster-start-->
+    <div class="container">
+        <div class="row">
+            <figure class="col-lg-5 col-sm-4 wow fadeInLeft">
+                <img src="img/iphone.png" alt="">
+            </figure>
+            <div class="col-lg-7 col-sm-8 featured-work">
+                <h2>{{t:FEATURED PROJECTS}}</h2>
+                <P class="padding-b">{{t:Explore our standout projects, each meticulously crafted to exceed expectations.From innovative solutions to seamless user experiences, we deliver excellence in every detail}}</P>
+                <div class="featured-box">
+                    <div class="featured-box-col1 wow fadeInRight delay-02s">
+                        <i class="fa-magic"></i>
+                    </div>
+                    <div class="featured-box-col2 wow fadeInRight delay-02s">
+                        <h3>{{t:THE ART OF SOFTWARE DEVELOPMENT}}</h3>
+                        <p>{{t:Experience the artistry of software development with us. Our team combines creativity and technical expertise to bring your vision to life, ensuring every project is a masterpiece}}
+                        </p>
+                    </div>
+                </div>
+                <div class="featured-box">
+                    <div class="featured-box-col1 wow fadeInRight delay-04s">
+                        <i class="fa-gift"></i>
+                    </div>
+                    <div class="featured-box-col2 wow fadeInRight delay-04s">
+                        <h3>{{t:CRAFTSMANSHIP REDEFINED}}</h3>
+                        <p>{{t:Discover our meticulously crafted software solutions, where every line of code reflects our commitment to excellence. Experience the difference with our finely tuned products}} </p>
+                    </div>
+                </div>
+                <div class="featured-box">
+                    <div class="featured-box-col1 wow fadeInRight delay-06s">
+                        <i class="fa-dashboard"></i>
+                    </div>
+                    <div class="featured-box-col2 wow fadeInRight delay-06s">
+                        <h3>{{t:OPTIMIZED FOR SUCCESS}}</h3>
+                        <p>{{t:Unlock your full potential with our SEO-optimized software solutions. From enhanced visibility to increased traffic, we will help you reach new heights in the digital landscape}}
+                        </p>
+                    </div>
+                </div>
+                <a class="Learn-More" href="#Portfolio">{{t:Learn More}}</a>
+            </div>
+        </div>
+    </div>
+</section><!--main-section alabaster-end-->
+
+<section class="main-section paddind" id="Portfolio"><!--main-section-start-->
+    <div class="container">
+        <h2>{{t:Portfolio}}</h2>
+        <h6>{{t:Fresh portfolio of designs that will keep you wanting more}}.</h6>
+        <div class="portfolioFilter">
+            <ul class="Portfolio-nav">
+                <li><button type="button" data-filter="*" aria-pressed="true" class="current">{{t:All}}</button></li>
+                <li><button type="button" data-filter=".webdesign" aria-pressed="false">{{t:Web Sites}}</button></li>
+                <li><button type="button" data-filter=".branding" aria-pressed="false">{{t:Mobile apps}}</button></li>
+                <li><button type="button" data-filter=".printdesign" aria-pressed="false">{{t:Logos}}</button></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+
+
+    <div class="portfolioContainer">
+
+        <article class="Portfolio-box webdesign">
+            <a class="portfolio-card" href="http://robotech.byethost13.com/malaysia/" target="_blank" rel="noopener noreferrer">
+                <div class="portfolio-media"><img src="img/malaysia.png" alt="Malaysia" loading="lazy" width="700" height="438"></div>
+                <div class="portfolio-caption"><div><h3>Malaysia</h3><p>{{t:site}}</p></div>
+                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View project}}</span></span>
+                </div>
+            </a>
+        </article>
+
+        <article class="Portfolio-box branding">
+            <a class="portfolio-card" href="img/app5.jpeg" target="_blank" rel="noopener noreferrer">
+                <div class="portfolio-media"><img src="img/app5.jpeg" alt="FaceBook" loading="lazy" width="700" height="438"></div>
+                <div class="portfolio-caption"><div><h3>FaceBook</h3><p>{{t:Branding}}</p></div>
+                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View image}}</span></span>
+                </div>
+            </a>
+        </article>
+
+
+        <article class="Portfolio-box webdesign">
+            <a class="portfolio-card" href="http://robotech.byethost13.com/code-craft/" target="_blank" rel="noopener noreferrer">
+                <div class="portfolio-media"><img src="img/codecraft.png" alt="code craft" loading="lazy" width="700" height="438"></div>
+                <div class="portfolio-caption"><div><h3>code craft</h3><p>{{t:softWare company}}</p></div>
+                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View project}}</span></span>
+                </div>
+            </a>
+        </article>
+
+
+        <article class="Portfolio-box branding">
+            <a class="portfolio-card" href="img/app1.jpeg" target="_blank" rel="noopener noreferrer">
+                <div class="portfolio-media"><img src="img/app1.jpeg" alt="Biano" loading="lazy" width="700" height="438"></div>
+                <div class="portfolio-caption"><div><h3>Biano</h3><p>{{t:App}}</p></div>
+                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View image}}</span></span>
+                </div>
+            </a>
+        </article>
+
+        <article class="Portfolio-box webdesign">
+            <a class="portfolio-card" href="http://robotech.byethost13.com/Holzwurm/product" target="_blank" rel="noopener noreferrer">
+                <div class="portfolio-media"><img src="img/holzwurm.png" alt="HolzWurm Store" loading="lazy" width="700" height="438"></div>
+                <div class="portfolio-caption"><div><h3>HolzWurm Store</h3><p>{{t:E-commerce}}</p></div>
+                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View project}}</span></span>
+                </div>
+            </a>
+        </article>
+
+        <article class="Portfolio-box branding">
+            <a class="portfolio-card" href="img/app2.jpeg" target="_blank" rel="noopener noreferrer">
+                <div class="portfolio-media"><img src="img/app2.jpeg" alt="DragonBall Z" loading="lazy" width="700" height="438"></div>
+                <div class="portfolio-caption"><div><h3>DragonBall Z</h3><p>{{t:App}}</p></div>
+                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View image}}</span></span>
+                </div>
+            </a>
+        </article>
+        <article class="Portfolio-box branding">
+            <a class="portfolio-card" href="img/app6.jpeg" target="_blank" rel="noopener noreferrer">
+                <div class="portfolio-media"><img src="img/app6.jpeg" alt="Dragonball" loading="lazy" width="700" height="438"></div>
+                <div class="portfolio-caption"><div><h3>Dragonball</h3><p>{{t:App}}</p></div>
+                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View image}}</span></span>
+                </div>
+            </a>
+        </article>
+        <article class="Portfolio-box branding">
+            <a class="portfolio-card" href="img/app4.jpeg" target="_blank" rel="noopener noreferrer">
+                <div class="portfolio-media"><img src="img/app4.jpeg" alt="Resturant" loading="lazy" width="700" height="438"></div>
+                <div class="portfolio-caption"><div><h3>Resturant</h3><p>{{t:App}}</p></div>
+                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View image}}</span></span>
+                </div>
+            </a>
+        </article>
+
+        <article class="Portfolio-box webdesign">
+            <a class="portfolio-card" href="http://robotech.byethost13.com/spicyo/" target="_blank" rel="noopener noreferrer">
+                <div class="portfolio-media"><img src="img/spicyo.png" alt="Spicyo" loading="lazy" width="700" height="438"></div>
+                <div class="portfolio-caption"><div><h3>Spicyo</h3><p>{{t:resturant}}</p></div>
+                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View project}}</span></span>
+                </div>
+            </a>
+        </article>
+        <article class="Portfolio-box printdesign">
+            <a class="portfolio-card" href="img/kmlogo.jpeg" target="_blank" rel="noopener noreferrer">
+                <div class="portfolio-media"><img src="img/kmlogo.jpeg" alt="KM" loading="lazy" width="700" height="438"></div>
+                <div class="portfolio-caption"><div><h3>KM</h3><p>{{t:Logo}}</p></div>
+                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View image}}</span></span>
+                </div>
+            </a>
+        </article>
+
+        <article class="Portfolio-box printdesign">
+            <a class="portfolio-card" href="img/hulzwurmlogo.jpeg" target="_blank" rel="noopener noreferrer">
+                <div class="portfolio-media"><img src="img/hulzwurmlogo.jpeg" alt="Hulzwrum" loading="lazy" width="700" height="438"></div>
+                <div class="portfolio-caption"><div><h3>Hulzwrum</h3><p>{{t:Logo}}</p></div>
+                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View image}}</span></span>
+                </div>
+            </a>
+        </article>
+        <article class="Portfolio-box printdesign">
+            <a class="portfolio-card" href="img/kmcard.jpeg" target="_blank" rel="noopener noreferrer">
+                <div class="portfolio-media"><img src="img/kmcard.jpeg" alt="KM Card" loading="lazy" width="700" height="438"></div>
+                <div class="portfolio-caption"><div><h3>KM Card</h3><p>{{t:Logo}}</p></div>
+                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View image}}</span></span>
+                </div>
+            </a>
+        </article>
+
+
+        <article class="Portfolio-box webdesign">
+            <a class="portfolio-card" href="https://vikiwave-762cd3e855b0.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+                <div class="portfolio-media"><img src="img/animeSite.png" alt="Anime E-Commerce" loading="lazy" width="700" height="438"></div>
+                <div class="portfolio-caption"><div><h3>Anime E-Commerce</h3><p>{{t:site}}</p></div>
+                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View project}}</span></span>
+                </div>
+            </a>
+        </article>
+
+
+
+
+    </div>
+</section><!--main-section-end-->
+
+<div class="c-logo-part" id="technologies"><!--c-logo-part-start-->
+    <div class="container">
+        <ul>
+            <li><a href="https://laravel.com/"><img src="img/laravel.png" alt="Laravel" width="200px"></a>
+            </li>
+            <li><a href="https://vuejs.org/guide/introduction.html"><img src="img/vue.png" alt="Vue.js"
+                        width="200px"></a></li>
+
+            <li><a href="https://wordpress.org/about/"><img src="img/wordpress.png" alt="WordPress"
+                        width="200px"></a></li>
+            <li><a href="https://flutter.dev/"><img src="img/flutter.png" alt="Flutter"
+                        width="200px"></a></li>
+            <li><a href="https://developer.android.com/studio"><img src="img/android.png" alt="Android"
+                        width="200px"></a></li>
+            <li><a
+                    href="https://developer.apple.com/swift/#:~:text=Swift%20is%20a%20successor%20to,performance%20and%20power%20they%20demand."><img
+                        src="img/ios.png" alt="iOS and Swift" width="70px"></a></li>
+        </ul>
+    </div>
+</div><!--c-logo-part-end-->
+
+<style>
+.team-leader-block {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.team-leader-box {
+    text-align: center; /* Center align the content */
+    max-width: 600px; /* Set a maximum width to prevent stretching on larger screens */
+}
+
+.team-leader-box img {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Automatically adjust the height */
+}
+
+</style>
+
+<section class="main-section team" id="team"><!--main-section team-start-->
+    <div class="container">
+        <h2>{{t:team}}</h2>
+        <h6>{{t:Take a closer look into our amazing team. We won’t bite}}.</h6>
+        <div class="team-leader-block clearfix">
+
+            <div class="team-leader-box">
+
+                <div class="team-leader  wow fadeInDown delay-06s">
+                    <div class="team-leader-shadow"><a href="mailto:Robotec.app@gmail.com" aria-label="{{t:Email}}"></a></div>
+                    <img src="img/abdulkader.jpeg" alt="{{t:Abdulkader Haj Mahmoud}}">
+                    <ul><li><a href="mailto:Robotec.app@gmail.com" class="fa-envelope" aria-label="{{t:Email}}"></a></li></ul>
+                </div>
+                <h3 class="wow fadeInDown delay-06s">{{t:Abdulkader Haj Mahmoud}}</h3>
+                <span class="wow fadeInDown delay-06s">{{t:IT Specialist}}</span>
+                <p class="wow fadeInDown delay-06s">{{t:As an IT specialist and programmer, I thrive on innovation and perpetual growth. Excited to harness my skills to drive real-world change}}.</p>
+            </div>
+
+
+        </div>
+    </div>
+</section><!--main-section team-end-->
+
+<section class="business-talking"><!--business-talking-start-->
+    <div class="container">
+        <h2>{{t:Let’s Talk Business}}.</h2>
+    </div>
+</section><!--business-talking-end-->
+<div class="container">
+    <section class="main-section contact" id="contact">
+
+        <div class="row">
+            <div class="col-lg-6 col-sm-7 wow fadeInLeft">
+                <div class="contact-info-box email email-only clearfix">
+                    <h3><i class="fa-envelope" aria-hidden="true"></i>{{t:email}}:</h3>
+                    <span><a href="mailto:Robotec.app@gmail.com">Robotec.app@gmail.com</a></span>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-sm-5 wow fadeInUp delay-05s">
+
+
+                <div class="form">
+                    <form id="contact-form" action="mailto:Robotec.app@gmail.com" method="get">
+
+                        <input class="input-text" type="text" id="name" name="name" required maxlength="255" aria-label="{{t:Name}}"  autocomplete="name" placeholder="{{t:Name}}">
+                        <input class="input-text" type="email" id='email' name="email" required aria-label="{{t:Email}}" autocomplete="email" placeholder="{{t:Email}}">
+                        <textarea class="input-text text-area" rows="6" id="message" name="message" required maxlength="3000" aria-label="{{t:Your Message}}" placeholder="{{t:Your Message}}"></textarea>
+                        <button class="input-btn" type="submit">{{t:Open email draft}}</button>
+
+
+                    <p class="email-note" id="email-note">{{t:Email draft note}}</p>
+                    <p id="contact-status" role="status" data-message="{{t:Email draft status}}"></p>
+                    </form>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-logo" style="width: 150px"><a href="#"><img src="img/logo.png"
+                    alt="RoboTec"></a></div>
+        <span class="copyright">{{t:Copy right © 2024 | Created by}}<a href="#header" style="color: var(--brand-green)">
+             RoboTec</a></span>
+    </div>
+    <!--
+        All links in the footer should remain intact.
+        Licenseing information is available at: http://bootstraptaste.com/license/
+        You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Knight
+    -->
+</footer>
+
+<script src="js/site.js" defer></script>
+</body>
+</html>
