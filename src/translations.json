@@ -96,7 +96,8 @@
   "footer.legal": "Legal",
   "footer.imprint": "Imprint",
   "footer.privacy": "Privacy",
-  "footer.top": "Back to top"
+  "footer.top": "Back to top",
+  "fab.label": "Email me directly"
  },
  "de": {
   "nav.skip": "Zum Inhalt springen",
@@ -195,7 +196,8 @@
   "footer.legal": "Rechtliches",
   "footer.imprint": "Impressum",
   "footer.privacy": "Datenschutz",
-  "footer.top": "Nach oben"
+  "footer.top": "Nach oben",
+  "fab.label": "Schreib mir direkt"
  },
  "ar": {
   "nav.skip": "تخطَّ إلى المحتوى",
@@ -294,7 +296,8 @@
   "footer.legal": "قانوني",
   "footer.imprint": "بيانات الناشر (Impressum)",
   "footer.privacy": "سياسة الخصوصية",
-  "footer.top": "للأعلى"
+  "footer.top": "للأعلى",
+  "fab.label": "راسلني مباشرة"
  },
  "fr": {
   "nav.skip": "Aller au contenu",
@@ -393,7 +396,8 @@
   "footer.legal": "Mentions",
   "footer.imprint": "Mentions légales",
   "footer.privacy": "Confidentialité",
-  "footer.top": "Haut de page"
+  "footer.top": "Haut de page",
+  "fab.label": "Écrivez-moi directement"
  },
  "it": {
   "nav.skip": "Vai al contenuto",
@@ -492,7 +496,8 @@
   "footer.legal": "Note legali",
   "footer.imprint": "Note legali (Impressum)",
   "footer.privacy": "Privacy",
-  "footer.top": "Torna su"
+  "footer.top": "Torna su",
+  "fab.label": "Scrivimi direttamente"
  },
  "nl": {
   "nav.skip": "Naar inhoud",
@@ -591,7 +596,8 @@
   "footer.legal": "Juridisch",
   "footer.imprint": "Colofon (Impressum)",
   "footer.privacy": "Privacy",
-  "footer.top": "Naar boven"
+  "footer.top": "Naar boven",
+  "fab.label": "Mail me direct"
  },
  "ru": {
   "nav.skip": "Перейти к содержанию",
@@ -690,7 +696,8 @@
   "footer.legal": "Правовая информация",
   "footer.imprint": "Выходные данные (Impressum)",
   "footer.privacy": "Конфиденциальность",
-  "footer.top": "Наверх"
+  "footer.top": "Наверх",
+  "fab.label": "Напишите мне напрямую"
  },
  "tr": {
   "nav.skip": "İçeriğe geç",
@@ -789,6 +796,7 @@
   "footer.legal": "Yasal",
   "footer.imprint": "Künye (Impressum)",
   "footer.privacy": "Gizlilik",
-  "footer.top": "Başa dön"
+  "footer.top": "Başa dön",
+  "fab.label": "Bana doğrudan yazın"
  }
 }
