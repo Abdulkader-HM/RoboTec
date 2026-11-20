@@ -232,6 +232,27 @@
     }
   }
 
+  /* AI terminal: type the command, then reveal the steps (loops while visible) */
+  const term = $('.term');
+  if (term) {
+    const typeEl = $('.type', term);
+    const lines = $$('.tl:not(.tl--cmd)', term);
+    const text = typeEl.dataset.text;
+    if (reduce || !('IntersectionObserver' in window)) { typeEl.textContent = text; lines.forEach(l => l.classList.add('show')); }
+    else {
+      let timers = [];
+      const run = () => {
+        timers.forEach(clearTimeout); timers = [];
+        typeEl.textContent = ''; lines.forEach(l => l.classList.remove('show'));
+        [...text].forEach((ch, i) => timers.push(setTimeout(() => { typeEl.textContent += ch; }, 300 + i * 45)));
+        const after = 300 + text.length * 45 + 400;
+        lines.forEach((l, i) => timers.push(setTimeout(() => l.classList.add('show'), after + i * 750)));
+        timers.push(setTimeout(run, after + lines.length * 750 + 4000));
+      };
+      new IntersectionObserver(es => { if (es[0].isIntersecting) run(); else { timers.forEach(clearTimeout); timers = []; } }, { threshold: .35 }).observe(term);
+    }
+  }
+
   /* Hero canvas: electric particle network */
   const canvas = $('.hero__canvas');
   if (canvas && canvas.getContext && !reduce) {

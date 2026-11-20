@@ -21,7 +21,7 @@ for (const locale of locales) {
   const canonical = html.match(/rel="canonical" href="([^"]+)"/)[1];
   assert.equal(canonical, 'https://abdulkader-hm.github.io/RoboTec/' + (locale && locale !== 'en' ? locale + '/' : ''));
   const nav = html.match(/<nav class="nav__links"[^>]*>([\s\S]*?)<\/nav>/)[1];
-  assert.equal((nav.match(/<a\b/g) || []).length, 5);
+  assert.equal((nav.match(/<a\b/g) || []).length, 6);
   assert.doesNotMatch(html, /fonts\.googleapis|cdnjs|jquery/i, 'No third-party requests');
   assert.match(html, /href="(?:\.\.\/|\.\/)impressum\/"/);
   assert.match(html, /href="(?:\.\.\/|\.\/)datenschutz\/"/);
