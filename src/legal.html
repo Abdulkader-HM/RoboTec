@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="de" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{pageTitle}} | RoboTec</title>
+  <meta name="robots" content="noindex,follow">
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/site.css">
+  <script>try{var t=localStorage.getItem('robotec-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body>
+  <header class="nav is-scrolled">
+    <div class="nav__inner">
+      <a class="brand" href="../" aria-label="RoboTec"><svg class="brand__bolt" viewBox="0 0 340 650" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"><path d="M268 180 176 277V28L43 417l75-74"/><path d="m226 310 74-78-130 390V372l-94 96"/></g></svg><span class="brand__name">RoboTec</span></a>
+      <a class="btn btn--small btn--ghost" href="../" style="margin-inline-start:auto">← Startseite</a>
+    </div>
+  </header>
+  <main class="legal">
+    <div class="wrap">
+{{content}}
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p class="footer__copy">© 2026 RoboTec · Abdulkader Haj Mahmoud</p>
+      <nav class="footer__links" aria-label="Rechtliches"><a href="../impressum/">Impressum</a><a href="../datenschutz/">Datenschutz</a></nav>
+    </div>
+  </footer>
+</body>
+</html>

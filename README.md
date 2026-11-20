@@ -1,6 +1,6 @@
 # RoboTec
 
-Static version of the original Robotech website, preserving its green and black design, portfolio, photographs, animations, and eight languages. The original private Laravel repository is maintained separately.
+Company website of RoboTec (Abdulkader Haj Mahmoud, Ottweiler). Static, animated, dark/light themes, eight languages, no third-party requests. See `DESIGN.md`.
 
 Website: https://abdulkader-hm.github.io/RoboTec/
 
@@ -16,13 +16,13 @@ npm run check
 python3 -m http.server 8080 --directory dist
 ```
 
-Edit `src/index.html` for page structure, `src/translations.json` for the existing translations, and `assets/` for styling, scripts, and images. Build output is generated in `dist/` and is not committed. English is the default; Arabic, German, Dutch, English, French, Italian, Russian, and Turkish have their own static routes.
+Edit `src/index.html` for page structure, `src/translations.json` for all texts (keys like `hero.title1`, one block per language), `src/legal/` for Impressum and Datenschutz, and `assets/` for styling (`css/site.css`), scripts (`js/site.js`), fonts, and images. Build output is generated in `dist/` and is not committed. English is the default; Arabic, German, Dutch, English, French, Italian, Russian, and Turkish have their own static routes.
 
 ## Contact form
 
-The form opens a prepared message in the visitor's email application. The visitor reviews and sends it there. The website itself sends and stores no messages. A direct email link is shown as a fallback. Contact is email only: the original personal phone number, social contact links, placeholder address, and unused Laravel login were removed.
+The form opens a prepared message in the visitor's email application. The visitor reviews and sends it there. The website itself sends and stores no messages. A direct email link is shown as a fallback. Contact is email only. The postal address appears only in the Impressum and Datenschutz pages, as legally required.
 
-The portfolio uses responsive image cards with accessible filter buttons, animated filter results, and keyboard focus states. Motion is reduced when the visitor requests it through their device settings.
+Motion is reduced when the visitor requests it through their device settings.
 
 ## Publication
 
@@ -38,4 +38,4 @@ After publication, verify the URL-prefix property `https://abdulkader-hm.github.
 
 Technical SEO does not guarantee indexing, timing, or a first-place ranking. Relevant project descriptions, updated work, useful content, and reputable links matter over time.
 
-The original Knight theme author notices remain in the stylesheet and footer source. Third-party assets retain their original licenses and notices.
+Fonts: Space Grotesk and Inter, both SIL Open Font License (see `assets/fonts/`).

@@ -1,494 +1,271 @@
 <!doctype html>
-<html lang="{{lang}}" dir="{{dir}}">
-
+<html lang="{{lang}}" dir="{{dir}}" data-theme="dark">
 <head>
-    <meta charset="utf-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <title>{{pageTitle}}</title>
-    <meta name="description" content="{{pageDescription}}">
-    {{seo}}
-
-    <link rel="icon" href="img/logo.png" type="image/x-icon">
-    <!-- For IE -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-
-    <link
-        href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600'
-        rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link href="css/responsive.css" rel="stylesheet" type="text/css">
-    <link href="css/site.css" rel="stylesheet" type="text/css">
-    <link href="css/animate.css" rel="stylesheet" type="text/css">
-
-
-
-    <script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-
-    <script type="text/javascript" src="js/wow.js"></script>
-    <script type="text/javascript" src="js/classie.js"></script>
-
-
-
-    <script src="js/respond-1.1.0.min.js"></script>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/html5element.js"></script>
-
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{pageTitle}}</title>
+  <meta name="description" content="{{pageDescription}}">
+  {{seo}}
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/space-grotesk-var.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="css/site.css">
+  <script>try{var t=localStorage.getItem('robotec-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch(e){}document.documentElement.classList.add('js');</script>
 </head>
-
 <body>
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="bolt" viewBox="0 0 340 650"><g fill="none" stroke="currentColor" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"><path d="M268 180 176 277V28L43 417l75-74"/><path d="m226 310 74-78-130 390V372l-94 96"/></g></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="15" rx="2.5"/><path d="M2.5 8.5h19M6 6.3h.01M8.5 6.3h.01M9 13l-2 2 2 2M15 13l2 2-2 2"/></g></symbol>
+    <symbol id="i-mobile" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></g></symbol>
+    <symbol id="i-api" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="7.5" ry="3"/><path d="M4.5 5.5v6.5c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V5.5M4.5 12v6.5c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V12"/></g></symbol>
+    <symbol id="i-ai" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M18.5 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></g></symbol>
+    <symbol id="i-brand" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 1 1 9-9c0 2-1.6 3-3.3 3h-2a2 2 0 0 0-1.5 3.3c.6.7.2 2.7-2.2 2.7z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10.5" cy="7" r="1"/><circle cx="15" cy="7.5" r="1"/></g></symbol>
+    <symbol id="i-support" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8.2-7.5 9.5-4.3-1.3-7.5-5-7.5-9.5V6z"/><path d="m8.8 12 2.2 2.2 4.4-4.4"/></g></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></g></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  </svg>
 
+  <a class="skip" href="#main">{{t:nav.skip}}</a>
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
-    <div style="overflow:hidden;">
-
-        <header class="header" id="header">
-
-            <div class="container">
-
-                    <figure class="logo animated fadeInDown delay-07s" style="width: 100%; text-align: center;">
-
-
-                    <a href="#"><img src="img/robotec.png" alt="RoboTec" width="627" height="391"></a>
-
-                </figure>
-                <h1 class="hero-title animated fadeInDown delay-07s">{{t:YOUR WINDOW TO THE DIGITAL WORLD}}</h1>
-                <ul class="we-create animated fadeInUp delay-1s">
-                    <li>{{t:We are a digital agency that loves crafting beautiful websites}}</li>
-                </ul>
-                <a class="link animated fadeInUp delay-1s" href="#service">{{t:lets Start}}</a>
-            </div>
-        </header><!--header-end-->
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="brand" href="#top" aria-label="RoboTec">
+        <svg class="brand__bolt" aria-hidden="true"><use href="#bolt"/></svg>
+        <span class="brand__name">RoboTec</span>
+      </a>
+      <nav class="nav__links" id="main-navigation" aria-label="{{t:nav.label}}">
+        <a href="#services">{{t:nav.services}}</a>
+        <a href="#products">{{t:nav.products}}</a>
+        <a href="#work">{{t:nav.work}}</a>
+        <a href="#about">{{t:nav.about}}</a>
+        <a href="#contact">{{t:nav.contact}}</a>
+      </nav>
+      <div class="nav__tools">
+        <label class="lang">
+          <span class="sr-only">{{t:nav.language}}</span>
+          <select class="lang__select" aria-label="{{t:nav.language}}">
+            <option value="{{url:en}}">English</option>
+            <option value="{{url:de}}">Deutsch</option>
+            <option value="{{url:ar}}">العربية</option>
+            <option value="{{url:fr}}">Français</option>
+            <option value="{{url:it}}">Italiano</option>
+            <option value="{{url:nl}}">Nederlands</option>
+            <option value="{{url:ru}}">Русский</option>
+            <option value="{{url:tr}}">Türkçe</option>
+          </select>
+        </label>
+        <button class="theme" type="button" aria-label="{{t:nav.theme}}" title="{{t:nav.theme}}">
+          <span class="theme__knob"><svg class="theme__sun" aria-hidden="true"><use href="#i-sun"/></svg><svg class="theme__moon" aria-hidden="true"><use href="#i-moon"/></svg></span>
+        </button>
+        <a class="btn btn--small nav__cta magnetic" href="#contact">{{t:nav.cta}}</a>
+        <button class="burger" type="button" aria-label="{{t:nav.menu}}" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span></button>
+      </div>
     </div>
+  </header>
 
-
-    <nav class="main-nav-outer" id="test"><!--main-nav-start-->
-        <div class="container">
-            <ul class="main-nav" id="main-navigation">
-                <li><a href="#service">{{t:Services}}</a></li>
-                <li><a href="#Portfolio">{{t:Portfolio}}</a></li>
-
-                <li><a href="#team">{{t:Team}}</a></li>
-                <li class="small-logo"><a href="#header"><img src="img/logo.png" alt="RoboTec"
-                            width="130px"></a></li>
-
-                <li><a href="#technologies">{{t:Technologies}}</a></li>
-                <li><a href="#contact">{{t:Contact}}</a></li>
-
-
-
-
-
-
-
-                <li class="language-login-wrapper">
-                    <select aria-label="{{t:LANGUAGE}}" class="language-dropdown-content" onchange="window.location.href=this.value;">
-                        <option value="#" selected disabled>{{t:LANGUAGE}}</option>
-                        <option value="{{url:en}}">{{t:English}}
-                        </option>
-                        <option value="{{url:de}}">{{t:German}}
-                        </option>
-                        <option value="{{url:nl}}">{{t:Dutch}}
-                        </option>
-                        <option value="{{url:ar}}">{{t:Arabic}}
-                        </option>
-                        <option value="{{url:ru}}">{{t:Russian}}
-                        </option>
-                        <option value="{{url:fr}}">{{t:French}}
-                        </option>
-                        <option value="{{url:it}}">{{t:Italian}}
-                        </option>
-                        <option value="{{url:tr}}">{{t:Turkish}}
-                        </option>
-
-
-                    </select>
-                </li>
-
-
-
-
-
-
-
-
-            </ul>
-            <a class="mobile-brand" href="#header" aria-label="RoboTec"><img src="img/logo.png" alt="RoboTec" width="130" height="55"></a>
-            <button class="res-nav_click" type="button" aria-label="{{t:Menu}}" aria-expanded="false" aria-controls="main-navigation"><i class="fa-bars" aria-hidden="true"></i></button>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow hero__eyebrow"><span class="dot"></span>{{t:hero.eyebrow}}</p>
+          <h1 class="hero__title" id="hero-title"><span class="split">{{t:hero.title1}}</span> <span class="split accent">{{t:hero.title2}}</span></h1>
+          <p class="hero__lead">{{t:hero.lead}}</p>
+          <div class="hero__actions">
+            <a class="btn magnetic" href="#contact"><span>{{t:hero.cta1}}</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+            <a class="btn btn--ghost" href="#work">{{t:hero.cta2}}</a>
+          </div>
         </div>
-    </nav><!--main-nav-end-->
-
-
-
-
-
-<section class="main-section" id="service"><!--main-section-start-->
-    <div class="container">
-        <h2>{{t:Services}}</h2>
-        <h6>
-           {{t:We deliver top-notch software solutions tailored to your needs, ensuring your success every step of the way}}</h6>
-        <div class="row">
-            <div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
-                <div class="service-list">
-                    <div class="service-list-col1">
-                        <i class="fa-paw"></i>
-                    </div>
-                    <div class="service-list-col2">
-                        <h3>{{t:branding}} &amp; {{t:identity}}</h3>
-                        <p>{{t:Crafting distinctive brand identities that leave a lasting impression. Elevate your brand with our creative solutions}}</p>
-                    </div>
-                </div>
-                <div class="service-list">
-                    <div class="service-list-col1">
-                        <i class="fa-gear"></i>
-                    </div>
-                    <div class="service-list-col2">
-                        <h3>{{t:web development}}</h3>
-                        <p>{{t:Specializing in creating responsive websites and mobile applications. From sleek websites to cutting-edge iOS and Android apps, we bring your ideas to life}}</p>
-                    </div>
-                </div>
-                <div class="service-list">
-                    <div class="service-list-col1">
-                        <i class="fa-apple"></i>
-                    </div>
-                    <div class="service-list-col2">
-                        <h3>{{t:mobile design}}</h3>
-                        <p>{{t:Designing intuitive and visually stunning interfaces for mobile applications. Enhance user experience and engagement on every screen size}}</p>
-                    </div>
-                </div>
-                <div class="service-list">
-                    <div class="service-list-col1">
-                        <i class="fa-medkit"></i>
-                    </div>
-                    <div class="service-list-col2">
-                        <h3>{{t:24/7 Support}}</h3>
-                        <p>{{t:Providing reliable and responsive IT support services around the clock. Stay productive and secure with our dedicated team at your service}}</p>
-                    </div>
-                </div>
-            </div>
-            <figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
-
-                <img src="img/laptop-robotec.png" alt="RoboTec">
-
-            </figure>
-
+        <div class="hero__mark" aria-hidden="true">
+          <div class="halo"></div>
+          <svg class="mark__bolt" viewBox="0 0 340 650"><g fill="none" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"><path class="draw" pathLength="1" d="M268 180 176 277V28L43 417l75-74"/><path class="draw draw--2" pathLength="1" d="m226 310 74-78-130 390V372l-94 96"/></g></svg>
+          <svg class="mark__word" viewBox="-10 -10 945 150"><g fill="none" stroke-width="11" stroke-linecap="round" stroke-linejoin="round">
+            <path class="draw" pathLength="1" d="M0 6h58a38 38 0 0 1 0 76H6v46m60-44 32 44"/>
+            <circle class="draw" pathLength="1" cx="191" cy="67" r="62"/>
+            <path class="draw" pathLength="1" d="M289 6h73a30.5 30.5 0 0 1 0 61h-73m68 0h11a30.5 30.5 0 0 1 0 61h-79"/>
+            <circle class="draw" pathLength="1" cx="485" cy="67" r="62"/>
+            <path class="draw" pathLength="1" d="M562 6h100M612 6v122"/>
+            <path class="draw" pathLength="1" d="M690 6h90M690 67h90M690 128h90"/>
+            <path class="draw" pathLength="1" d="M911 23a62 62 0 1 0 0 88"/>
+          </g></svg>
         </div>
-    </div>
-</section><!--main-section-end-->
-
-
-<section class="main-section alabaster"><!--main-section alabaster-start-->
-    <div class="container">
-        <div class="row">
-            <figure class="col-lg-5 col-sm-4 wow fadeInLeft">
-                <img src="img/iphone.png" alt="">
-            </figure>
-            <div class="col-lg-7 col-sm-8 featured-work">
-                <h2>{{t:FEATURED PROJECTS}}</h2>
-                <P class="padding-b">{{t:Explore our standout projects, each meticulously crafted to exceed expectations.From innovative solutions to seamless user experiences, we deliver excellence in every detail}}</P>
-                <div class="featured-box">
-                    <div class="featured-box-col1 wow fadeInRight delay-02s">
-                        <i class="fa-magic"></i>
-                    </div>
-                    <div class="featured-box-col2 wow fadeInRight delay-02s">
-                        <h3>{{t:THE ART OF SOFTWARE DEVELOPMENT}}</h3>
-                        <p>{{t:Experience the artistry of software development with us. Our team combines creativity and technical expertise to bring your vision to life, ensuring every project is a masterpiece}}
-                        </p>
-                    </div>
-                </div>
-                <div class="featured-box">
-                    <div class="featured-box-col1 wow fadeInRight delay-04s">
-                        <i class="fa-gift"></i>
-                    </div>
-                    <div class="featured-box-col2 wow fadeInRight delay-04s">
-                        <h3>{{t:CRAFTSMANSHIP REDEFINED}}</h3>
-                        <p>{{t:Discover our meticulously crafted software solutions, where every line of code reflects our commitment to excellence. Experience the difference with our finely tuned products}} </p>
-                    </div>
-                </div>
-                <div class="featured-box">
-                    <div class="featured-box-col1 wow fadeInRight delay-06s">
-                        <i class="fa-dashboard"></i>
-                    </div>
-                    <div class="featured-box-col2 wow fadeInRight delay-06s">
-                        <h3>{{t:OPTIMIZED FOR SUCCESS}}</h3>
-                        <p>{{t:Unlock your full potential with our SEO-optimized software solutions. From enhanced visibility to increased traffic, we will help you reach new heights in the digital landscape}}
-                        </p>
-                    </div>
-                </div>
-                <a class="Learn-More" href="#Portfolio">{{t:Learn More}}</a>
-            </div>
-        </div>
-    </div>
-</section><!--main-section alabaster-end-->
-
-<section class="main-section paddind" id="Portfolio"><!--main-section-start-->
-    <div class="container">
-        <h2>{{t:Portfolio}}</h2>
-        <h6>{{t:Fresh portfolio of designs that will keep you wanting more}}.</h6>
-        <div class="portfolioFilter">
-            <ul class="Portfolio-nav">
-                <li><button type="button" data-filter="*" aria-pressed="true" class="current">{{t:All}}</button></li>
-                <li><button type="button" data-filter=".webdesign" aria-pressed="false">{{t:Web Sites}}</button></li>
-                <li><button type="button" data-filter=".branding" aria-pressed="false">{{t:Mobile apps}}</button></li>
-                <li><button type="button" data-filter=".printdesign" aria-pressed="false">{{t:Logos}}</button></li>
-
-            </ul>
-        </div>
-
-    </div>
-
-
-
-    <div class="portfolioContainer">
-
-        <article class="Portfolio-box webdesign">
-            <a class="portfolio-card" href="http://robotech.byethost13.com/malaysia/" target="_blank" rel="noopener noreferrer">
-                <div class="portfolio-media"><img src="img/malaysia.png" alt="Malaysia" loading="lazy" width="700" height="438"></div>
-                <div class="portfolio-caption"><div><h3>Malaysia</h3><p>{{t:site}}</p></div>
-                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View project}}</span></span>
-                </div>
-            </a>
-        </article>
-
-        <article class="Portfolio-box branding">
-            <a class="portfolio-card" href="img/app5.jpeg" target="_blank" rel="noopener noreferrer">
-                <div class="portfolio-media"><img src="img/app5.jpeg" alt="FaceBook" loading="lazy" width="700" height="438"></div>
-                <div class="portfolio-caption"><div><h3>FaceBook</h3><p>{{t:Branding}}</p></div>
-                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View image}}</span></span>
-                </div>
-            </a>
-        </article>
-
-
-        <article class="Portfolio-box webdesign">
-            <a class="portfolio-card" href="http://robotech.byethost13.com/code-craft/" target="_blank" rel="noopener noreferrer">
-                <div class="portfolio-media"><img src="img/codecraft.png" alt="code craft" loading="lazy" width="700" height="438"></div>
-                <div class="portfolio-caption"><div><h3>code craft</h3><p>{{t:softWare company}}</p></div>
-                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View project}}</span></span>
-                </div>
-            </a>
-        </article>
-
-
-        <article class="Portfolio-box branding">
-            <a class="portfolio-card" href="img/app1.jpeg" target="_blank" rel="noopener noreferrer">
-                <div class="portfolio-media"><img src="img/app1.jpeg" alt="Biano" loading="lazy" width="700" height="438"></div>
-                <div class="portfolio-caption"><div><h3>Biano</h3><p>{{t:App}}</p></div>
-                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View image}}</span></span>
-                </div>
-            </a>
-        </article>
-
-        <article class="Portfolio-box webdesign">
-            <a class="portfolio-card" href="http://robotech.byethost13.com/Holzwurm/product" target="_blank" rel="noopener noreferrer">
-                <div class="portfolio-media"><img src="img/holzwurm.png" alt="HolzWurm Store" loading="lazy" width="700" height="438"></div>
-                <div class="portfolio-caption"><div><h3>HolzWurm Store</h3><p>{{t:E-commerce}}</p></div>
-                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View project}}</span></span>
-                </div>
-            </a>
-        </article>
-
-        <article class="Portfolio-box branding">
-            <a class="portfolio-card" href="img/app2.jpeg" target="_blank" rel="noopener noreferrer">
-                <div class="portfolio-media"><img src="img/app2.jpeg" alt="DragonBall Z" loading="lazy" width="700" height="438"></div>
-                <div class="portfolio-caption"><div><h3>DragonBall Z</h3><p>{{t:App}}</p></div>
-                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View image}}</span></span>
-                </div>
-            </a>
-        </article>
-        <article class="Portfolio-box branding">
-            <a class="portfolio-card" href="img/app6.jpeg" target="_blank" rel="noopener noreferrer">
-                <div class="portfolio-media"><img src="img/app6.jpeg" alt="Dragonball" loading="lazy" width="700" height="438"></div>
-                <div class="portfolio-caption"><div><h3>Dragonball</h3><p>{{t:App}}</p></div>
-                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View image}}</span></span>
-                </div>
-            </a>
-        </article>
-        <article class="Portfolio-box branding">
-            <a class="portfolio-card" href="img/app4.jpeg" target="_blank" rel="noopener noreferrer">
-                <div class="portfolio-media"><img src="img/app4.jpeg" alt="Resturant" loading="lazy" width="700" height="438"></div>
-                <div class="portfolio-caption"><div><h3>Resturant</h3><p>{{t:App}}</p></div>
-                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View image}}</span></span>
-                </div>
-            </a>
-        </article>
-
-        <article class="Portfolio-box webdesign">
-            <a class="portfolio-card" href="http://robotech.byethost13.com/spicyo/" target="_blank" rel="noopener noreferrer">
-                <div class="portfolio-media"><img src="img/spicyo.png" alt="Spicyo" loading="lazy" width="700" height="438"></div>
-                <div class="portfolio-caption"><div><h3>Spicyo</h3><p>{{t:resturant}}</p></div>
-                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View project}}</span></span>
-                </div>
-            </a>
-        </article>
-        <article class="Portfolio-box printdesign">
-            <a class="portfolio-card" href="img/kmlogo.jpeg" target="_blank" rel="noopener noreferrer">
-                <div class="portfolio-media"><img src="img/kmlogo.jpeg" alt="KM" loading="lazy" width="700" height="438"></div>
-                <div class="portfolio-caption"><div><h3>KM</h3><p>{{t:Logo}}</p></div>
-                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View image}}</span></span>
-                </div>
-            </a>
-        </article>
-
-        <article class="Portfolio-box printdesign">
-            <a class="portfolio-card" href="img/hulzwurmlogo.jpeg" target="_blank" rel="noopener noreferrer">
-                <div class="portfolio-media"><img src="img/hulzwurmlogo.jpeg" alt="Hulzwrum" loading="lazy" width="700" height="438"></div>
-                <div class="portfolio-caption"><div><h3>Hulzwrum</h3><p>{{t:Logo}}</p></div>
-                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View image}}</span></span>
-                </div>
-            </a>
-        </article>
-        <article class="Portfolio-box printdesign">
-            <a class="portfolio-card" href="img/kmcard.jpeg" target="_blank" rel="noopener noreferrer">
-                <div class="portfolio-media"><img src="img/kmcard.jpeg" alt="KM Card" loading="lazy" width="700" height="438"></div>
-                <div class="portfolio-caption"><div><h3>KM Card</h3><p>{{t:Logo}}</p></div>
-                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View image}}</span></span>
-                </div>
-            </a>
-        </article>
-
-
-        <article class="Portfolio-box webdesign">
-            <a class="portfolio-card" href="https://vikiwave-762cd3e855b0.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-                <div class="portfolio-media"><img src="img/animeSite.png" alt="Anime E-Commerce" loading="lazy" width="700" height="438"></div>
-                <div class="portfolio-caption"><div><h3>Anime E-Commerce</h3><p>{{t:site}}</p></div>
-                    <span class="portfolio-open"><i class="fa-arrow-right" aria-hidden="true"></i><span class="sr-only">{{t:View project}}</span></span>
-                </div>
-            </a>
-        </article>
-
-
-
-
-    </div>
-</section><!--main-section-end-->
-
-<div class="c-logo-part" id="technologies"><!--c-logo-part-start-->
-    <div class="container">
-        <ul>
-            <li><a href="https://laravel.com/"><img src="img/laravel.png" alt="Laravel" width="200px"></a>
-            </li>
-            <li><a href="https://vuejs.org/guide/introduction.html"><img src="img/vue.png" alt="Vue.js"
-                        width="200px"></a></li>
-
-            <li><a href="https://wordpress.org/about/"><img src="img/wordpress.png" alt="WordPress"
-                        width="200px"></a></li>
-            <li><a href="https://flutter.dev/"><img src="img/flutter.png" alt="Flutter"
-                        width="200px"></a></li>
-            <li><a href="https://developer.android.com/studio"><img src="img/android.png" alt="Android"
-                        width="200px"></a></li>
-            <li><a
-                    href="https://developer.apple.com/swift/#:~:text=Swift%20is%20a%20successor%20to,performance%20and%20power%20they%20demand."><img
-                        src="img/ios.png" alt="iOS and Swift" width="70px"></a></li>
-        </ul>
-    </div>
-</div><!--c-logo-part-end-->
-
-<style>
-.team-leader-block {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-}
-
-.team-leader-box {
-    text-align: center; /* Center align the content */
-    max-width: 600px; /* Set a maximum width to prevent stretching on larger screens */
-}
-
-.team-leader-box img {
-    max-width: 100%; /* Make the image responsive */
-    height: auto; /* Automatically adjust the height */
-}
-
-</style>
-
-<section class="main-section team" id="team"><!--main-section team-start-->
-    <div class="container">
-        <h2>{{t:team}}</h2>
-        <h6>{{t:Take a closer look into our amazing team. We won’t bite}}.</h6>
-        <div class="team-leader-block clearfix">
-
-            <div class="team-leader-box">
-
-                <div class="team-leader  wow fadeInDown delay-06s">
-                    <div class="team-leader-shadow"><a href="mailto:Robotec.app@gmail.com" aria-label="{{t:Email}}"></a></div>
-                    <img src="img/abdulkader.jpeg" alt="{{t:Abdulkader Haj Mahmoud}}">
-                    <ul><li><a href="mailto:Robotec.app@gmail.com" class="fa-envelope" aria-label="{{t:Email}}"></a></li></ul>
-                </div>
-                <h3 class="wow fadeInDown delay-06s">{{t:Abdulkader Haj Mahmoud}}</h3>
-                <span class="wow fadeInDown delay-06s">{{t:IT Specialist}}</span>
-                <p class="wow fadeInDown delay-06s">{{t:As an IT specialist and programmer, I thrive on innovation and perpetual growth. Excited to harness my skills to drive real-world change}}.</p>
-            </div>
-
-
-        </div>
-    </div>
-</section><!--main-section team-end-->
-
-<section class="business-talking"><!--business-talking-start-->
-    <div class="container">
-        <h2>{{t:Let’s Talk Business}}.</h2>
-    </div>
-</section><!--business-talking-end-->
-<div class="container">
-    <section class="main-section contact" id="contact">
-
-        <div class="row">
-            <div class="col-lg-6 col-sm-7 wow fadeInLeft">
-                <div class="contact-info-box email email-only clearfix">
-                    <h3><i class="fa-envelope" aria-hidden="true"></i>{{t:email}}:</h3>
-                    <span><a href="mailto:Robotec.app@gmail.com">Robotec.app@gmail.com</a></span>
-                </div>
-
-            </div>
-            <div class="col-lg-6 col-sm-5 wow fadeInUp delay-05s">
-
-
-                <div class="form">
-                    <form id="contact-form" action="mailto:Robotec.app@gmail.com" method="get">
-
-                        <input class="input-text" type="text" id="name" name="name" required maxlength="255" aria-label="{{t:Name}}"  autocomplete="name" placeholder="{{t:Name}}">
-                        <input class="input-text" type="email" id='email' name="email" required aria-label="{{t:Email}}" autocomplete="email" placeholder="{{t:Email}}">
-                        <textarea class="input-text text-area" rows="6" id="message" name="message" required maxlength="3000" aria-label="{{t:Your Message}}" placeholder="{{t:Your Message}}"></textarea>
-                        <button class="input-btn" type="submit">{{t:Open email draft}}</button>
-
-
-                    <p class="email-note" id="email-note">{{t:Email draft note}}</p>
-                    <p id="contact-status" role="status" data-message="{{t:Email draft status}}"></p>
-                    </form>
-                </div>
-
-
-
-            </div>
-        </div>
+      </div>
+      <dl class="stats">
+        <div class="stat"><dt class="sr-only">{{t:stat.projects}}</dt><dd><span class="count" data-to="13">0</span>+</dd><p>{{t:stat.projects}}</p></div>
+        <div class="stat"><dt class="sr-only">{{t:stat.platforms}}</dt><dd><span class="count" data-to="3">0</span></dd><p>{{t:stat.platforms}}</p></div>
+        <div class="stat"><dt class="sr-only">{{t:stat.languages}}</dt><dd><span class="count" data-to="8">0</span></dd><p>{{t:stat.languages}}</p></div>
+        <div class="stat"><dt class="sr-only">{{t:stat.stack}}</dt><dd><span class="count" data-to="12">0</span>+</dd><p>{{t:stat.stack}}</p></div>
+      </dl>
+      <a class="scroll-cue" href="#services" aria-label="{{t:hero.scroll}}"><span></span></a>
     </section>
-</div>
-<footer class="footer">
-    <div class="container">
-        <div class="footer-logo" style="width: 150px"><a href="#"><img src="img/logo.png"
-                    alt="RoboTec"></a></div>
-        <span class="copyright">{{t:Copy right © 2024 | Created by}}<a href="#header" style="color: var(--brand-green)">
-             RoboTec</a></span>
-    </div>
-    <!--
-        All links in the footer should remain intact.
-        Licenseing information is available at: http://bootstraptaste.com/license/
-        You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Knight
-    -->
-</footer>
 
-<script src="js/site.js" defer></script>
+    <div class="marquee" id="technologies" aria-label="{{t:tech.label}}">
+      <div class="marquee__track">
+        <ul><li>Laravel</li><li>PHP</li><li>Flutter</li><li>Dart</li><li>Swift</li><li>iOS</li><li>Android</li><li>PostgreSQL</li><li>MySQL</li><li>Vue.js</li><li>JavaScript</li><li>WordPress</li><li>AI APIs</li><li>Git</li></ul>
+        <ul aria-hidden="true"><li>Laravel</li><li>PHP</li><li>Flutter</li><li>Dart</li><li>Swift</li><li>iOS</li><li>Android</li><li>PostgreSQL</li><li>MySQL</li><li>Vue.js</li><li>JavaScript</li><li>WordPress</li><li>AI APIs</li><li>Git</li></ul>
+      </div>
+    </div>
+
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <header class="head" data-reveal>
+          <p class="eyebrow">01 — {{t:services.kicker}}</p>
+          <h2 id="services-title">{{t:services.title}}</h2>
+        </header>
+        <div class="services">
+          <article class="card spot" data-reveal><div class="card__icon"><svg aria-hidden="true"><use href="#i-web"/></svg></div><h3>{{t:s1.t}}</h3><p>{{t:s1.d}}</p></article>
+          <article class="card spot" data-reveal><div class="card__icon"><svg aria-hidden="true"><use href="#i-mobile"/></svg></div><h3>{{t:s2.t}}</h3><p>{{t:s2.d}}</p></article>
+          <article class="card spot" data-reveal><div class="card__icon"><svg aria-hidden="true"><use href="#i-api"/></svg></div><h3>{{t:s3.t}}</h3><p>{{t:s3.d}}</p></article>
+          <article class="card spot" data-reveal><div class="card__icon"><svg aria-hidden="true"><use href="#i-ai"/></svg></div><h3>{{t:s4.t}}</h3><p>{{t:s4.d}}</p></article>
+          <article class="card spot" data-reveal><div class="card__icon"><svg aria-hidden="true"><use href="#i-brand"/></svg></div><h3>{{t:s5.t}}</h3><p>{{t:s5.d}}</p></article>
+          <article class="card spot" data-reveal><div class="card__icon"><svg aria-hidden="true"><use href="#i-support"/></svg></div><h3>{{t:s6.t}}</h3><p>{{t:s6.d}}</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="products" aria-labelledby="products-title">
+      <div class="wrap product">
+        <div class="product__copy" data-reveal>
+          <p class="eyebrow">02 — {{t:products.kicker}}</p>
+          <h2 id="products-title">{{t:products.title}}</h2>
+          <p class="pill">{{t:logi.tag}}</p>
+          <p class="lead">{{t:logi.desc}}</p>
+          <ul class="ticks">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{t:logi.f1}}</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{t:logi.f2}}</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{t:logi.f3}}</li>
+          </ul>
+          <p class="soon"><span class="dot"></span>{{t:logi.status}}</p>
+        </div>
+        <div class="phone-stage" data-reveal aria-hidden="true">
+          <div class="orbit"></div>
+          <div class="phone" dir="ltr">
+            <div class="phone__notch"></div>
+            <div class="phone__bar"><span class="phone__avatar">🦊</span><div><b>Logi</b><small>online</small></div></div>
+            <div class="chat">
+              <p class="msg msg--bot">Hallo! Was hast du heute gemacht? 😊</p>
+              <p class="msg msg--me">Ich habe ein Café besuchen.</p>
+              <p class="msg msg--bot">Fast perfekt! ✨ Sag: <mark>Ich habe ein Café besucht.</mark></p>
+              <p class="msg msg--me">Ich habe ein Café besucht! ☕</p>
+              <p class="msg msg--typing"><i></i><i></i><i></i></p>
+            </div>
+            <div class="phone__input"><span>Nachricht…</span><b>➤</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="wrap">
+        <header class="head" data-reveal>
+          <p class="eyebrow">03 — {{t:process.kicker}}</p>
+          <h2 id="process-title">{{t:process.title}}</h2>
+        </header>
+        <ol class="steps">
+          <li class="step" data-reveal><span class="step__no">01</span><h3>{{t:p1.t}}</h3><p>{{t:p1.d}}</p></li>
+          <li class="step" data-reveal><span class="step__no">02</span><h3>{{t:p2.t}}</h3><p>{{t:p2.d}}</p></li>
+          <li class="step" data-reveal><span class="step__no">03</span><h3>{{t:p3.t}}</h3><p>{{t:p3.d}}</p></li>
+          <li class="step" data-reveal><span class="step__no">04</span><h3>{{t:p4.t}}</h3><p>{{t:p4.d}}</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <header class="head head--row" data-reveal>
+          <div>
+            <p class="eyebrow">04 — {{t:work.kicker}}</p>
+            <h2 id="work-title">{{t:work.title}}</h2>
+          </div>
+          <div class="filters" role="group" aria-label="{{t:work.filter}}">
+            <button type="button" data-filter="*" aria-pressed="true">{{t:work.all}}</button>
+            <button type="button" data-filter="web" aria-pressed="false">{{t:work.web}}</button>
+            <button type="button" data-filter="app" aria-pressed="false">{{t:work.apps}}</button>
+            <button type="button" data-filter="logo" aria-pressed="false">{{t:work.logos}}</button>
+          </div>
+        </header>
+        <div class="works">
+          <article class="work" data-cat="web"><a class="work__link" href="https://vikiwave-762cd3e855b0.herokuapp.com/" target="_blank" rel="noopener noreferrer"><div class="work__media"><img src="img/animeSite.png" alt="" loading="lazy" width="1347" height="601"></div><div class="work__cap"><div><h3>Anime E-Commerce</h3><p>{{t:cat.ecommerce}}</p></div><span class="work__go"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">{{t:work.view}}</span></span></div></a></article>
+          <article class="work" data-cat="web"><a class="work__link" href="http://robotech.byethost13.com/Holzwurm/product" target="_blank" rel="noopener noreferrer"><div class="work__media"><img src="img/holzwurm.png" alt="" loading="lazy" width="1838" height="916"></div><div class="work__cap"><div><h3>HolzWurm Store</h3><p>{{t:cat.ecommerce}}</p></div><span class="work__go"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">{{t:work.view}}</span></span></div></a></article>
+          <article class="work" data-cat="web"><a class="work__link" href="http://robotech.byethost13.com/code-craft/" target="_blank" rel="noopener noreferrer"><div class="work__media"><img src="img/codecraft.png" alt="" loading="lazy" width="1754" height="821"></div><div class="work__cap"><div><h3>Code Craft</h3><p>{{t:cat.software}}</p></div><span class="work__go"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">{{t:work.view}}</span></span></div></a></article>
+          <article class="work" data-cat="web"><a class="work__link" href="http://robotech.byethost13.com/malaysia/" target="_blank" rel="noopener noreferrer"><div class="work__media"><img src="img/malaysia.png" alt="" loading="lazy" width="1757" height="901"></div><div class="work__cap"><div><h3>Malaysia</h3><p>{{t:cat.site}}</p></div><span class="work__go"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">{{t:work.view}}</span></span></div></a></article>
+          <article class="work" data-cat="web"><a class="work__link" href="http://robotech.byethost13.com/spicyo/" target="_blank" rel="noopener noreferrer"><div class="work__media"><img src="img/spicyo.png" alt="" loading="lazy" width="1838" height="898"></div><div class="work__cap"><div><h3>Spicyo</h3><p>{{t:cat.restaurant}}</p></div><span class="work__go"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">{{t:work.view}}</span></span></div></a></article>
+          <article class="work" data-cat="app"><a class="work__link" href="img/app1.jpeg" target="_blank" rel="noopener noreferrer"><div class="work__media"><img src="img/app1.jpeg" alt="" loading="lazy" width="1327" height="712"></div><div class="work__cap"><div><h3>Biano</h3><p>{{t:cat.app}}</p></div><span class="work__go"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">{{t:work.image}}</span></span></div></a></article>
+          <article class="work" data-cat="app"><a class="work__link" href="img/app4.jpeg" target="_blank" rel="noopener noreferrer"><div class="work__media"><img src="img/app4.jpeg" alt="" loading="lazy" width="1344" height="716"></div><div class="work__cap"><div><h3>Restaurant</h3><p>{{t:cat.app}}</p></div><span class="work__go"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">{{t:work.image}}</span></span></div></a></article>
+          <article class="work" data-cat="app"><a class="work__link" href="img/app5.jpeg" target="_blank" rel="noopener noreferrer"><div class="work__media"><img src="img/app5.jpeg" alt="" loading="lazy" width="1280" height="663"></div><div class="work__cap"><div><h3>FaceBook</h3><p>{{t:cat.branding}}</p></div><span class="work__go"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">{{t:work.image}}</span></span></div></a></article>
+          <article class="work" data-cat="app"><a class="work__link" href="img/app2.jpeg" target="_blank" rel="noopener noreferrer"><div class="work__media"><img src="img/app2.jpeg" alt="" loading="lazy" width="1344" height="716"></div><div class="work__cap"><div><h3>DragonBall Z</h3><p>{{t:cat.app}}</p></div><span class="work__go"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">{{t:work.image}}</span></span></div></a></article>
+          <article class="work" data-cat="app"><a class="work__link" href="img/app6.jpeg" target="_blank" rel="noopener noreferrer"><div class="work__media"><img src="img/app6.jpeg" alt="" loading="lazy" width="1360" height="705"></div><div class="work__cap"><div><h3>Dragonball</h3><p>{{t:cat.app}}</p></div><span class="work__go"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">{{t:work.image}}</span></span></div></a></article>
+          <article class="work" data-cat="logo"><a class="work__link" href="img/kmlogo.jpeg" target="_blank" rel="noopener noreferrer"><div class="work__media"><img src="img/kmlogo.jpeg" alt="" loading="lazy" width="1122" height="423"></div><div class="work__cap"><div><h3>KM</h3><p>{{t:cat.logo}}</p></div><span class="work__go"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">{{t:work.image}}</span></span></div></a></article>
+          <article class="work" data-cat="logo"><a class="work__link" href="img/kmcard.jpeg" target="_blank" rel="noopener noreferrer"><div class="work__media"><img src="img/kmcard.jpeg" alt="" loading="lazy" width="762" height="472"></div><div class="work__cap"><div><h3>KM Card</h3><p>{{t:cat.card}}</p></div><span class="work__go"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">{{t:work.image}}</span></span></div></a></article>
+          <article class="work" data-cat="logo"><a class="work__link" href="img/hulzwurmlogo.jpeg" target="_blank" rel="noopener noreferrer"><div class="work__media"><img src="img/hulzwurmlogo.jpeg" alt="" loading="lazy" width="1024" height="1024"></div><div class="work__cap"><div><h3>HolzWurm</h3><p>{{t:cat.logo}}</p></div><span class="work__go"><svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">{{t:work.image}}</span></span></div></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap about">
+        <div class="about__photo" data-reveal>
+          <div class="ring" aria-hidden="true"></div>
+          <img src="img/abdulkader.jpeg" alt="{{t:about.name}}" width="750" height="791" loading="lazy">
+          <svg class="about__bolt" aria-hidden="true"><use href="#bolt"/></svg>
+        </div>
+        <div class="about__copy" data-reveal>
+          <p class="eyebrow">05 — {{t:about.kicker}}</p>
+          <h2 id="about-title">{{t:about.name}}</h2>
+          <p class="role">{{t:about.role}}</p>
+          <p class="lead">{{t:about.bio}}</p>
+          <ul class="facts">
+            <li><b>B.Sc.</b><span>{{t:about.f1}}</span></li>
+            <li><b>~10</b><span>{{t:about.f2}}</span></li>
+            <li><b>3</b><span>{{t:about.f3}}</span></li>
+          </ul>
+          <p class="mini">{{t:about.skills}}</p>
+          <ul class="chips"><li>PHP</li><li>Laravel</li><li>Flutter</li><li>Dart</li><li>Swift</li><li>PostgreSQL</li><li>MySQL</li><li>JavaScript</li><li>Git</li><li>REST APIs</li><li>AI APIs</li><li>Linux &amp; macOS</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact__inner">
+        <div class="contact__copy" data-reveal>
+          <p class="eyebrow">06 — {{t:contact.kicker}}</p>
+          <h2 id="contact-title">{{t:contact.title}}</h2>
+          <p class="lead">{{t:contact.lead}}</p>
+          <ul class="contact__list">
+            <li><span class="ci"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><div><small>{{t:contact.email}}</small><a href="mailto:Robotec.app@gmail.com" dir="ltr">Robotec.app@gmail.com</a></div></li>
+            <li><span class="ci"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><div><small>{{t:contact.location}}</small><span>{{t:contact.locationValue}}</span></div></li>
+          </ul>
+        </div>
+        <form class="form" id="contact-form" action="mailto:Robotec.app@gmail.com" method="get" data-reveal>
+          <label class="field"><input type="text" id="name" name="name" required maxlength="255" autocomplete="name" placeholder=" "><span>{{t:form.name}}</span></label>
+          <label class="field"><input type="email" id="email" name="email" required autocomplete="email" placeholder=" "><span>{{t:form.email}}</span></label>
+          <label class="field"><textarea id="message" name="message" rows="5" required maxlength="3000" placeholder=" "></textarea><span>{{t:form.message}}</span></label>
+          <button class="btn btn--block magnetic" type="submit"><span>{{t:form.submit}}</span><svg aria-hidden="true"><use href="#arrow"/></svg></button>
+          <p class="form__note">{{t:form.note}}</p>
+          <p class="form__status" id="contact-status" role="status" data-message="{{t:form.status}}"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <a class="brand" href="#top" aria-label="RoboTec"><svg class="brand__bolt" aria-hidden="true"><use href="#bolt"/></svg><span class="brand__name">RoboTec</span></a>
+      <p class="footer__copy">© <span class="year">2026</span> RoboTec · Abdulkader Haj Mahmoud. {{t:footer.rights}}</p>
+      <nav class="footer__links" aria-label="{{t:footer.legal}}">
+        <a href="{{root}}impressum/">{{t:footer.imprint}}</a>
+        <a href="{{root}}datenschutz/">{{t:footer.privacy}}</a>
+        <a href="#top">{{t:footer.top}} ↑</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/site.js" defer></script>
 </body>
 </html>

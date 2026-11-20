@@ -14,3 +14,9 @@ Precise existing-image edit. The supplied original image is the ONLY edit target
 Exact laptop edit prompt:
 
 Use case: text-localization. Edit target: the provided existing laptop mockup image. Change ONLY the letters on its screen from ROBOTECH to ROBOTEC, removing the final H and centering the existing remaining letters horizontally. Preserve the exact thin futuristic flat green lettering, exact green lightning symbol, laptop hardware, black screen, shadows, framing, white background and 704x423 proportions. Do not redesign anything. No glow, no halo, no thicker strokes, no beautification. All pixels outside the word ROBOTECH must look identical to the original.
+
+## 2026 redesign
+
+- The old Knight theme files (Bootstrap, jQuery, WOW, Font Awesome, background images, technology logos, laptop mockup) were removed.
+- `assets/fonts/space-grotesk-var.woff` (subset) and `assets/fonts/inter-var.woff2`: SIL Open Font License, licences included next to the files.
+- `assets/img/og.png`: screenshot of the new hero for share previews. `assets/img/favicon.svg`: bolt traced from `robotec.png`.

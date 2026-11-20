@@ -20,18 +20,18 @@ for (const locale of locales) {
   assert.equal((html.match(/rel="alternate" hreflang=/g) || []).length, 9);
   const canonical = html.match(/rel="canonical" href="([^"]+)"/)[1];
   assert.equal(canonical, 'https://abdulkader-hm.github.io/RoboTec/' + (locale && locale !== 'en' ? locale + '/' : ''));
-  const nav = html.match(/<ul class="main-nav"[^>]*>([\s\S]*?)<\/ul>/)[1];
-  const navItems = [...nav.matchAll(/<li\b/g)];
-  assert.equal(navItems.length, 7);
-  assert.match(nav, /<li class="small-logo">/);
-  assert.equal((nav.split('<li class="small-logo">')[0].match(/<li\b/g) || []).length, 3);
-  assert.match(html, new RegExp(`<html lang="${locale || 'en'}" dir="${locale === 'ar' ? 'rtl' : 'ltr'}">`));
+  const nav = html.match(/<nav class="nav__links"[^>]*>([\s\S]*?)<\/nav>/)[1];
+  assert.equal((nav.match(/<a\b/g) || []).length, 5);
+  assert.doesNotMatch(html, /fonts\.googleapis|cdnjs|jquery/i, 'No third-party requests');
+  assert.match(html, /href="(?:\.\.\/|\.\/)impressum\/"/);
+  assert.match(html, /href="(?:\.\.\/|\.\/)datenschutz\/"/);
+  assert.match(html, new RegExp(`<html lang="${locale || 'en'}" dir="${locale === 'ar' ? 'rtl' : 'ltr'}"`));
   assert.equal((html.match(/<body>/g) || []).length, 1);
   assert.equal((html.match(/<\/body>/g) || []).length, 1);
   assert.doesNotMatch(html, /\{\{|@csrf|<\?php|route\(|Abdulkader\.haj\.mahmoud@gmail\.com|>\s*RoboTech\s*</);
   assert.doesNotMatch(html, /href=["'][^"']*(?:login|register|logout)/);
   assert.doesNotMatch(html, /tel:|wa\.me|facebook\.com\/messages|linkedin\.com|\+?49\d{8,}/);
-  assert.equal((html.match(/class="portfolio-card"/g) || []).length, 13);
+  assert.equal((html.match(/class="work__link"/g) || []).length, 13);
   assert.equal((html.match(/data-filter=/g) || []).length, 4);
   assert.match(html, /mailto:Robotec\.app@gmail\.com/);
   const ids = [...html.matchAll(/\bid=["']([^"']+)["']/g)].map(match => match[1]);
@@ -50,7 +50,12 @@ for (const locale of locales) {
   for (const lang of Object.keys(translations)) {
     assert.match(html, new RegExp(`<option value="(?:\.\./|\./)${lang}/"`));
   }
-  assert.match(html, /value="(?:\.\.\/|\.\/)it\/">Italian|value="(?:\.\.\/|\.\/)it\/"(?: selected)?>/);
+}
+for (const slug of ['impressum', 'datenschutz']) {
+  const html = await readFile(path.join(dist, slug, 'index.html'), 'utf8');
+  assert.match(html, /Auf dem Graben 8/);
+  assert.match(html, /Robotec\.app@gmail\.com/);
+  assert.doesNotMatch(html, /\{\{/);
 }
 const sitemap = await readFile(path.join(dist, 'sitemap.xml'), 'utf8');
 assert.equal((sitemap.match(/<loc>/g) || []).length, 8);
